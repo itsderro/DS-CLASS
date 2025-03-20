@@ -1,154 +1,85 @@
- #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+int main()
+{
+    /*float physics_assignment, physics_coursework, physics_midterm, physics_endterm;
+    float chemistry_assignment, chemistry_coursework, chemistry_midterm, chemistry_endterm;
+    float math_assignment, math_coursework, math_midterm, math_endterm;
 
-/*double PHYsiCS_AVE(){
-        int asS, CW, midT, EOT;
-        printf("======PHYSICS=======\n");
-        printf("ENter the scores for assignments\n");
-        scanf("%d",&asS);
-        printf("ENter the scores for course work\n");
-        scanf("%d",&CW);
-        printf("ENter the scores for mid term\n");
-        scanf("%d",&midT);
-        printf("ENter the scores for end of term\n");
-        scanf("%d",&EOT);
-        int SUm = asS+CW+midT+EOT;
-    double avERage= (double)SUm/4;
 
-return avERage;
+    float avg_physics, avg_chemistry, avg_math;
+
+
+    printf("Enter marks for Physics:\n");
+    printf("Assignment: ");
+   scanf_s("%f", &physics_assignment);
+    printf("Coursework: ");
+    scanf_s("%f", &physics_coursework);
+    printf("Midterm: ");
+    scanf_s("%f", &physics_midterm);
+    printf("End of Term Exam: ");
+   scanf_s("%f", &physics_endterm);
+
+
+    printf("\nEnter marks for Chemistry:\n");
+    printf("Assignment: ");
+   scanf_s("%f", &chemistry_assignment);
+    printf("Coursework: ");
+    scanf_s("%f", &chemistry_coursework);
+    printf("Midterm: ");
+    scanf_s("%f", &chemistry_midterm);
+    printf("End of Term Exam: ");
+    scanf("%f", &chemistry_endterm);
+
+
+    printf("\nEnter marks for Math:\n");
+    printf("Assignment: ");
+  scanf_s("%f", &math_assignment);
+    printf("Coursework: ");
+     scanf_s("%f", &math_coursework);
+    printf("Midterm: ");
+   scanf_s("%f", &math_midterm);
+    printf("End of Term Exam: ");
+     scanf_s("%f", &math_endterm);
+
+
+    avg_physics = (physics_assignment + physics_coursework + physics_midterm + physics_endterm) / 4;
+    avg_chemistry = (chemistry_assignment + chemistry_coursework + chemistry_midterm + chemistry_endterm) / 4;
+    avg_math = (math_assignment + math_coursework + math_midterm + math_endterm) / 4;
+
+
+    printf("\nAverage marks for Physics: %.2f\n", avg_physics);
+    printf("Average marks for Chemistry: %.2f\n", avg_chemistry);
+    printf("Average marks for Math: %.2f\n", avg_math);
+
+
+    float overall_avg = (avg_physics + avg_chemistry + avg_math) / 3;
+    printf("\nOverall average marks: %.2f\n", overall_avg);*/
+
+int n, x;
+printf("Enter the number of domestic animals: ");
+scanf_s("%d", &n);
+
+char domestic_animals[n][50];
+for(int i=0; i<n; i++){
+    printf("Enter the domestic animal %d:", i+1);
+    scanf_s("%s", domestic_animals[i]);
 }
-double maTH_AVE(){
-     int ass, cW, MidT, EoT;
-      printf("\n======MATHEMATICS=======\n");
-    printf("ENter the scores for assignments\n");
-    scanf("%d",&ass);
-    printf("ENter the scores for course work\n");
-    scanf("%d",&cW);
-    printf("ENter the scores for mid term\n");
-    scanf("%d",&MidT);
-    printf("ENter the scores for end of term\n");
-    scanf("%d",&EoT);
-    int SUM = ass+cW+MidT+EoT;
-    double avERage= (double)SUM/4;
+ printf("Enter the number of wild animals: ");
+scanf_s("%d", &x);
 
-return avERage;
+char wild_animals[x][50];
+for(int i=0; i<x; i++){
+    printf("Enter the domestic animal %d:", i+1);
+    scanf_s("%s", wild_animals[i]);
 }
-double CHem_AVE(){
-    int AsS, Cw, miDT, EOt;
-    printf("\n======CHEMISTRY=======\n ");
-    printf("ENter the scores for assignments\n");
-    scanf("%d",&AsS);
-    printf("ENter the scores for course work\n");
-    scanf("%d",&Cw);
-    printf("ENter the scores for mid term\n");
-    scanf("%d",&miDT);
-    printf("ENter the scores for end of term\n");
-    scanf("%d",&EOt);
-    int sUm = AsS+Cw+miDT+EOt;
-    double avERage= (double)sUm/4;
-
-return avERage;
-}
-
-
-
-int main(){
-    double PHY = PHYsiCS_AVE();
-    printf("Average for Physics is = %.2lf\n", PHY);
-    double CHEM= CHem_AVE();
-    printf("Average for chemistry is = %.2lf\n", CHEM);
-    double MATH= maTH_AVE();
-    printf("Average for mathematics is = %.2lf\n", MATH);
-    return 0;
-}*/
-
-/*int main(){
-    char*arr[3]={"Aijuka","Derrick","Richard"};
-    for(int i=0;i<3;i++)
-    {
-        printf("%s\t", arr[i]);
+    printf("All the animals:\n ");
+    for(int i=0; i<n; i++){
+        printf("%d. %s\n", i+1, domestic_animals[i]);
     }
-return 0;
-}*/
-
-//MERGING AN ARRAY
-/*int main(){
-    printf("Enter three domestic animals\n");
-    char domestic_animals[3][20];
-    for(int i=0;i<3;i++){
-        scanf("%s", &domestic_animals[i]);
+    for(int i=0; i<x; i++){
+        printf("%d. %s\n", n+i+1, wild_animals[i]);
     }
-    printf("Enter three wild animals\n");
-    char wild_animals[3][20];
-    for(int i=0;i<3;i++){
-        scanf("%s", &wild_animals[i]);
-    }
-    int size = 6;
-    char mergedArray[6][20];
-    for(int i = 0;i<3;i++){
-        strcpy(mergedArray[i],domestic_animals[i]);
-    }
-    for(int i=0;i<3;i++){
-        strcpy(mergedArray[i+3],wild_animals[i]);
-    }
-    for(int i=0; i<6;i++){
-        printf("%s  ",mergedArray[i]);
-    }
-
-
-return 0;
-}*/
-
-//SEARCHING AN ARRRAY
-/*void main(){
-    char animals[3][20],searchItem[20];
-    int i;
-    printf("Enter animals\n");
-    for(i=0;i<3;i++){
-    gets(animals[i]);
-    }
-    printf("Enter search item\n");
-    gets(searchItem);
-    for(i=0; i<3; i++){
-        if(strcmpi(searchItem,animals[i])==0)
-        {
-            printf("item is %s\n", animals[i]);
-            break;
-        }
-    }
-    if(i==3){
-        printf("Not found\n");
-    }
-}*/
-
-//DELETION OPERATION IN AN ARRAY
-
-int main(){
-    char num[3][100];
-    printf("Enter the list of friends\n");
-    for(int i=0;i<3;i++){
-        gets(num[i]);
-    }
-    int _size=sizeof(num)/sizeof(num[0][100]);
-    char element[100];
-    printf("Enter delete element\n");
-    gets(element);
-    for(int i=0;i<_size;i++){
-        if(stricmp(num[i],element)!=0){
-        _size=_size-1;
-            for(int j=i;j<_size;j++){
-            num[j][100]=num[j+1][100];
-            }
-        }else{
-            printf("Item not found\n");
-            break;
-        }
-    }
-    for(int k=0;k<_size;k++){
-        printf("The list is: %s ",num[k][100]);
-    }
-
     return 0;
 }
-
