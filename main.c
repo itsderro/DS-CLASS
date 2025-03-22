@@ -57,6 +57,11 @@ int main()
     float overall_avg = (avg_physics + avg_chemistry + avg_math) / 3;
     printf("\nOverall average marks: %.2f\n", overall_avg);*/
 
+
+    //i understand it now!!!!
+
+
+
 int n, x;
 printf("Enter the number of domestic animals: ");
 scanf_s("%d", &n);
