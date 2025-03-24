@@ -1,6 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+void sort( int numbers[],int size){
+    for(int i=0;i<size-1;i++){
+        for(int j=0; j<size-1; j++){
+            if(numbers[j]>numbers[j+1]){
+                int temp=numbers[j];
+                numbers[j]=numbers[j+1];
+                numbers[j+1]=temp;
+            }
+        }
+    }
+
+}
+
+void printNumbers(int numbers[], int size){
+    for(int i=0;i<size;i++){
+        printf("%d\t", numbers[i]);
+    }
+}
 int main()
 {
     /*float physics_assignment, physics_coursework, physics_midterm, physics_endterm;
@@ -55,12 +74,7 @@ int main()
 
 
     float overall_avg = (avg_physics + avg_chemistry + avg_math) / 3;
-    printf("\nOverall average marks: %.2f\n", overall_avg);*/
-
-
-    //i understand it now!!!!
-
-
+    printf("\nOverall average marks: %.2f\n", overall_avg);
 
 int n, x;
 printf("Enter the number of domestic animals: ");
@@ -85,7 +99,8 @@ for(int i=0; i<x; i++){
     }
     for(int i=0; i<x; i++){
         printf("%d. %s\n", n+i+1, wild_animals[i]);
-    }*/
+    }
+
     //merge
     int size=n+x;
     char merged_array[size][50];
@@ -97,6 +112,17 @@ for(int i=0; i<x; i++){
     }
     for(int i=0; i<size; i++){
         printf("%s ", merged_array[i]);
+    }*/
+
+    //SORTING AN ARRAY
+    int numbers[10];
+    int size =sizeof(numbers)/sizeof(numbers[0]);
+    printf("Enter any number\n");
+    for(int i=0;i<10;i++){
+        scanf("%d",&numbers[i]);
     }
+    sort(numbers,size);
+    printNumbers(numbers,size);
+
     return 0;
 }
