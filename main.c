@@ -3,7 +3,7 @@
 #include <string.h>
 
 void sort( int numbers[],int size){
-    for(int i=0;i<size-1;i++){
+   for(int i=0;i<size-1;i++){
         for(int j=0; j<size-1; j++){
             if(numbers[j]>numbers[j+1]){
                 int temp=numbers[j];
@@ -11,8 +11,8 @@ void sort( int numbers[],int size){
                 numbers[j+1]=temp;
             }
         }
-    }
 
+   }
 }
 
 void printNumbers(int numbers[], int size){
@@ -115,10 +115,13 @@ for(int i=0; i<x; i++){
     }*/
 
     //SORTING AN ARRAY
-    int numbers[10];
-    int size =sizeof(numbers)/sizeof(numbers[0]);
+     int size;
+    int numbers[size];
+
+    printf("Enter the size\n");
+    scanf("%d",&size);
     printf("Enter any number\n");
-    for(int i=0;i<10;i++){
+    for(int i=0;i<size;i++){
         scanf("%d",&numbers[i]);
     }
     sort(numbers,size);
